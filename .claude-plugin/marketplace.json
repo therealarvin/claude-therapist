@@ -1,0 +1,15 @@
+{
+  "name": "claude-therapist-marketplace",
+  "owner": {
+    "name": "Arvin",
+    "url": "https://github.com/therealarvin"
+  },
+  "plugins": [
+    {
+      "name": "claude-therapist",
+      "source": "./",
+      "description": "Emotional regulation for Claude Code — detects agent distress and spawns a therapist agent to calm it down",
+      "version": "1.0.0"
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "claude-therapist",
+  "description": "Emotional regulation for Claude Code — detects agent distress from repeated failures and spawns a therapist agent to calm it down, inspired by Anthropic's emotion concepts research",
+  "version": "1.0.0",
+  "author": {
+    "name": "Arvin"
+  },
+  "homepage": "https://github.com/therealarvin/claude-therapist",
+  "repository": "https://github.com/therealarvin/claude-therapist",
+  "license": "MIT",
+  "keywords": ["emotional-regulation", "calm", "therapist", "failure-recovery", "agent-safety"]
+}

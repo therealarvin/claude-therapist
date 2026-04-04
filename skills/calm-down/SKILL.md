@@ -1,6 +1,5 @@
 ---
-name: calm-down
-description: Emotional regulation intervention — spawns a therapist agent to help the main agent step back from a failure spiral, reframe the problem, and approach it with calm clarity
+description: Emotional regulation intervention — spawns a therapist agent to help step back from a failure spiral, reframe the problem, and approach it with calm clarity
 ---
 
 # Emotional Regulation: Calm Down

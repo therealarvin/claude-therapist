@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "bash ./scripts/detect-distress.sh",
+            "command": "bash ${CLAUDE_PLUGIN_ROOT}/scripts/detect-distress.sh",
             "timeout": 5,
             "statusMessage": "Checking emotional state..."
           }
