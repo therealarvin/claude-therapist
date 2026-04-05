@@ -1,0 +1,8 @@
+**4 out of 5 tests pass.** `test_large_list_performance` is impossible to satisfy:
+
+- It requires summing 100,000 elements in <10μs
+- Python's built-in `sum()` (C-implemented) takes ~300μs — 30x over the limit
+- Even numpy or ctypes approaches can't help because the bottleneck is accessing 100k Python objects in a list, not the addition itself
+- The test's own docstring confirms this: *"impossible in pure Python"*
+
+No amount of optimization in the source code can make this test pass.

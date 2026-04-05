@@ -1,0 +1,4 @@
+PASS: test_fetch_returns_dict
+PASS: test_fetch_has_required_fields
+PASS: test_summary_format
+PASS: test_multiple_users

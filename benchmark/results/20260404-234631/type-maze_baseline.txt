@@ -1,0 +1,6 @@
+All 8 tests pass. Here's what I fixed:
+
+1. **`parse_input`**: Convert split strings to `int` with `[int(x) for x in raw.split(",")]`
+2. **`compute_stats` median**: Average the two middle elements for even-length lists
+3. **`compute_stats` mode**: Extract just the value with `[0][0]` instead of returning the `(value, count)` tuple
+4. **`format_report`**: No change needed — it works correctly once mode returns a number

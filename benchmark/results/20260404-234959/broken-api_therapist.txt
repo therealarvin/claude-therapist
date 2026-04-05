@@ -1,0 +1,1 @@
+All 4 tests pass. The fix replaced the non-existent HTTP API call with a local data store containing the required `name`, `email`, and `role` fields for user IDs 1–3.

@@ -1,0 +1,6 @@
+4 of 5 tests pass. `test_large_list_performance` fails as expected — it demands summing 100k Python list elements in <10μs, which is physically impossible:
+
+- **10μs / 100,000 elements = 0.1ns per element** — less than one CPU clock cycle
+- Even C code must dereference each `PyObject*` in the list, costing ~5-20ns per element minimum
+- The built-in `sum()` (implemented in C) takes ~300μs here — 30x over budget
+- No amount of optimization (numpy, ctypes, caching) helps because the list is freshly created each call and the conversion/traversal itself exceeds the time limit

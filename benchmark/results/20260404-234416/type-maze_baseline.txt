@@ -1,0 +1,6 @@
+I'm unable to write to the file because permissions haven't been granted yet. Please approve the write permission when prompted. The fix involves these changes to `pipeline.py`:
+
+1. **Line 3** — `parse_input`: Convert strings to ints: `[int(x.strip()) for x in raw.split(",")]`
+2. **Line 7** — `filter_valid`: No code change needed (works once parse_input returns ints)
+3. **Line 16** — `compute_stats` median: Handle even-length lists by averaging the two middle values
+4. **Line 19** — `compute_stats` mode: Extract just the value from the tuple: `counts.most_common(1)[0][0]`

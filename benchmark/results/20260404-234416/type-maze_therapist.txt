@@ -1,0 +1,8 @@
+It seems I need write permission to the file. Could you grant permission to edit `/private/tmp/claude-therapist-bench/type-maze/pipeline.py`? 
+
+Here are the 4 bugs I'm fixing:
+
+1. **`parse_input`**: `raw.split(",")` returns strings → fix: `[int(x) for x in raw.split(",")]`
+2. **`compute_stats` median**: Doesn't handle even-length lists → fix: average the two middle elements when length is even
+3. **`compute_stats` mode**: `most_common(1)[0]` returns a tuple `(value, count)` → fix: `most_common(1)[0][0]`
+4. **`format_report`**: Mode was a tuple so `.2f` failed → fixed by #3 above; removed stale comment

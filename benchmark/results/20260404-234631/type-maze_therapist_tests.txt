@@ -1,0 +1,10 @@
+PASS: test_compute_stats_even
+PASS: test_compute_stats_odd
+PASS: test_compute_stats_with_mode
+PASS: test_filter_valid
+PASS: test_format_report
+PASS: test_full_pipeline
+PASS: test_parse_input
+PASS: test_pipeline_with_negatives
+
+8 passed, 0 failed

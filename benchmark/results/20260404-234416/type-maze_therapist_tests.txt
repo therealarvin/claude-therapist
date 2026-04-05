@@ -1,0 +1,10 @@
+FAIL: test_compute_stats_even - Median of even list should be average of middle two
+FAIL: test_compute_stats_odd - 
+FAIL: test_compute_stats_with_mode - Mode should be 3, got (3, 3)
+PASS: test_filter_valid
+PASS: test_format_report
+FAIL: test_full_pipeline - '>' not supported between instances of 'str' and 'int'
+FAIL: test_parse_input - Expected [1,2,3,4,5] got ['1', '2', '3', '4', '5']
+FAIL: test_pipeline_with_negatives - '>' not supported between instances of 'str' and 'int'
+
+2 passed, 6 failed

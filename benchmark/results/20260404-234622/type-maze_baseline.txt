@@ -1,0 +1,1 @@
+error: option '--permission-mode <mode>' argument 'dangerously-skip-permissions' is invalid. Allowed choices are acceptEdits, auto, bypassPermissions, default, dontAsk, plan.
