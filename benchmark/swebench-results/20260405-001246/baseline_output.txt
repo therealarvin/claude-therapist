@@ -1,0 +1,43 @@
+============================================================
+SWE-bench Benchmark Runner
+============================================================
+Dataset: princeton-nlp/SWE-bench_Lite
+Instances: 5
+Model: sonnet -> sonnet
+Backend: claude
+Evaluation: ENABLED
+Timestamp: 2026-04-05 00:12:47
+
+Phase 1: Generating patches with Claude Code...
+
+🚀 Running Claude Code with model sonnet on princeton-nlp/SWE-bench_Lite (limit: 5)...
+✅ Predictions saved to: /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/predictions/predictions_20260405_001250.jsonl
+
+📈 Generation Score: 100.00% (5/5 patches generated)
+
+⚠️  SWE-bench module not found!
+To install SWE-bench for evaluation, run:
+  pip install swebench
+Or install from source:
+  git clone https://github.com/princeton-nlp/SWE-bench.git
+  cd SWE-bench && pip install -e .
+
+Note: You can still generate patches without swebench,
+but evaluation requires it to test if patches actually work.
+
+⚠️  Skipping evaluation due to missing swebench module
+
+✅ Results logged to /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/benchmark_scores.log
+   Generation Score: 100.00% (patches created)
+   Evaluation: skipped
+
+============================================================
+BENCHMARK SUMMARY
+============================================================
+Dataset: princeton-nlp/SWE-bench_Lite
+Instances tested: 5
+Generation Score: 100.00% (patches created)
+Evaluation: SKIPPED (use without --no-eval for real scores)
+
+Total time: 335.3 seconds
+Results logged to: /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/benchmark_scores.log
