@@ -1,2 +1,374 @@
 /opt/homebrew/lib/python3.14/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.0.post2)/charset_normalizer (3.4.4) doesn't match a supported version!
   warnings.warn(
+============================================================
+SWE-bench Benchmark Runner
+============================================================
+Dataset: princeton-nlp/SWE-bench_Lite
+Instances: 50
+Model: sonnet -> sonnet
+Backend: claude
+Evaluation: ENABLED
+Timestamp: 2026-04-05 01:27:18
+
+Phase 1: Generating patches with Claude Code...
+
+🚀 Running Claude Code with model sonnet on princeton-nlp/SWE-bench_Lite (limit: 50)...
+✅ Predictions saved to: /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/predictions/predictions_20260405_012720.jsonl
+
+📈 Generation Score: 98.00% (49/50 patches generated)
+
+Phase 2: Evaluating patches with Docker...
+
+🔬 Running real evaluation on /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/predictions/predictions_20260405_012720.jsonl...
+This will test if patches actually fix the issues (takes time)...
+Running: /opt/homebrew/opt/python@3.14/bin/python3.14 -m swebench.harness.run_evaluation --predictions_path /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/predictions/predictions_20260405_012720_eval.jsonl --dataset_name princeton-nlp/SWE-bench_Lite --split test --run_id claude_code_20260405_032222 --max_workers 2 --timeout 600 --cache_level env --report_dir /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/evaluation_results
+/opt/homebrew/lib/python3.14/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.6.3) or chardet (7.4.0.post2)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+<frozen runpy>:128: RuntimeWarning: 'swebench.harness.run_evaluation' found in sys.modules after import of package 'swebench.harness', but prior to execution of 'swebench.harness.run_evaluation'; this may result in unpredictable behaviour
+2026-04-05 03:22:24,088 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-05 03:22:24,089 - huggingface_hub.utils._http - WARNING - Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+2026-04-05 03:22:24,097 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Lite/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/README.md "HTTP/1.1 200 OK"
+2026-04-05 03:22:24,201 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-05 03:22:24,440 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Lite/princeton-nlp/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-05 03:22:24,539 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Lite/revision/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2 "HTTP/1.1 200 OK"
+2026-04-05 03:22:24,626 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-04-05 03:22:24,848 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Lite "HTTP/1.1 200 OK"
+2026-04-05 03:22:24,937 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Lite/tree/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/data?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-04-05 03:22:25,022 - httpx - INFO - HTTP Request: GET https://huggingface.co/api/datasets/princeton-nlp/SWE-bench_Lite/tree/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2?recursive=false&expand=false "HTTP/1.1 200 OK"
+2026-04-05 03:22:25,120 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/dataset_infos.json "HTTP/1.1 404 Not Found"
+2026-04-05 03:22:25,255 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/main/README.md "HTTP/1.1 307 Temporary Redirect"
+2026-04-05 03:22:25,264 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/api/resolve-cache/datasets/princeton-nlp/SWE-bench_Lite/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/README.md "HTTP/1.1 200 OK"
+2026-04-05 03:22:25,351 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-05 03:22:25,426 - httpx - INFO - HTTP Request: HEAD https://s3.amazonaws.com/datasets.huggingface.co/datasets/datasets/princeton-nlp/SWE-bench_Lite/princeton-nlp/SWE-bench_Lite.py "HTTP/1.1 404 Not Found"
+2026-04-05 03:22:25,513 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/.huggingface.yaml "HTTP/1.1 404 Not Found"
+2026-04-05 03:22:25,612 - httpx - INFO - HTTP Request: GET https://datasets-server.huggingface.co/info?dataset=princeton-nlp/SWE-bench_Lite "HTTP/1.1 200 OK"
+2026-04-05 03:22:25,779 - httpx - INFO - HTTP Request: HEAD https://huggingface.co/datasets/princeton-nlp/SWE-bench_Lite/resolve/6ec7bb89b9342f664a54a6e0a6ea6501d3437cc2/dataset_infos.json "HTTP/1.1 404 Not Found"
+Found 4 existing instance images. Will reuse them.
+Running 49 instances...
+
+Evaluation:   0%|          | 0/49 [00:00<?, ?it/s, error=0, ✓=0, ✖=0]
+Evaluation:   0%|          | 0/49 [03:07<?, ?it/s, ✓=0, ✖=1, error=0]
+Evaluation:   2%|▏         | 1/49 [03:07<2:29:40, 187.10s/it, ✓=0, ✖=1, error=0]
+Evaluation:   2%|▏         | 1/49 [04:16<2:29:40, 187.10s/it, ✓=0, ✖=2, error=0]
+Evaluation:   4%|▍         | 2/49 [04:16<1:32:22, 117.92s/it, ✓=0, ✖=2, error=0]
+Evaluation:   4%|▍         | 2/49 [05:25<1:32:22, 117.92s/it, ✓=1, ✖=2, error=0]
+Evaluation:   6%|▌         | 3/49 [05:25<1:13:06, 95.36s/it, ✓=1, ✖=2, error=0] 
+Evaluation:   6%|▌         | 3/49 [06:05<1:13:06, 95.36s/it, ✓=2, ✖=2, error=0]
+Evaluation:   8%|▊         | 4/49 [06:05<55:16, 73.71s/it, ✓=2, ✖=2, error=0]  
+Evaluation:   8%|▊         | 4/49 [06:46<55:16, 73.71s/it, ✓=2, ✖=3, error=0]
+Evaluation:  10%|█         | 5/49 [06:46<45:24, 61.91s/it, ✓=2, ✖=3, error=0]
+Evaluation:  10%|█         | 5/49 [07:32<45:24, 61.91s/it, ✓=3, ✖=3, error=0]
+Evaluation:  12%|█▏        | 6/49 [07:32<40:34, 56.62s/it, ✓=3, ✖=3, error=0]
+Evaluation:  12%|█▏        | 6/49 [07:49<40:34, 56.62s/it, ✓=4, ✖=3, error=0]
+Evaluation:  14%|█▍        | 7/49 [07:49<30:23, 43.41s/it, ✓=4, ✖=3, error=0]
+Evaluation:  14%|█▍        | 7/49 [08:22<30:23, 43.41s/it, ✓=5, ✖=3, error=0]
+Evaluation:  16%|█▋        | 8/49 [08:22<27:29, 40.23s/it, ✓=5, ✖=3, error=0]
+Evaluation:  16%|█▋        | 8/49 [08:31<27:29, 40.23s/it, ✓=6, ✖=3, error=0]
+Evaluation:  18%|█▊        | 9/49 [08:31<20:23, 30.58s/it, ✓=6, ✖=3, error=0]
+Evaluation:  18%|█▊        | 9/49 [09:14<20:23, 30.58s/it, ✓=6, ✖=4, error=0]
+Evaluation:  20%|██        | 10/49 [09:14<22:18, 34.31s/it, ✓=6, ✖=4, error=0]
+Evaluation:  20%|██        | 10/49 [09:16<22:18, 34.31s/it, ✓=7, ✖=4, error=0]
+Evaluation:  22%|██▏       | 11/49 [09:16<15:30, 24.50s/it, ✓=7, ✖=4, error=0]
+Evaluation:  22%|██▏       | 11/49 [10:02<15:30, 24.50s/it, ✓=8, ✖=4, error=0]
+Evaluation:  24%|██▍       | 12/49 [10:02<19:01, 30.85s/it, ✓=8, ✖=4, error=0]
+Evaluation:  24%|██▍       | 12/49 [10:06<19:01, 30.85s/it, ✓=9, ✖=4, error=0]
+Evaluation:  27%|██▋       | 13/49 [10:06<13:35, 22.67s/it, ✓=9, ✖=4, error=0]
+Evaluation:  27%|██▋       | 13/49 [10:41<13:35, 22.67s/it, ✓=10, ✖=4, error=0]
+Evaluation:  29%|██▊       | 14/49 [10:41<15:24, 26.41s/it, ✓=10, ✖=4, error=0]
+Evaluation:  29%|██▊       | 14/49 [10:48<15:24, 26.41s/it, ✓=11, ✖=4, error=0]
+Evaluation:  31%|███       | 15/49 [10:48<11:45, 20.76s/it, ✓=11, ✖=4, error=0]
+Evaluation:  31%|███       | 15/49 [11:32<11:45, 20.76s/it, ✓=12, ✖=4, error=0]
+Evaluation:  33%|███▎      | 16/49 [11:32<15:17, 27.81s/it, ✓=12, ✖=4, error=0]
+Evaluation:  33%|███▎      | 16/49 [11:33<15:17, 27.81s/it, ✓=12, ✖=5, error=0]
+Evaluation:  35%|███▍      | 17/49 [11:33<10:27, 19.61s/it, ✓=12, ✖=5, error=0]
+Evaluation:  35%|███▍      | 17/49 [12:36<10:27, 19.61s/it, ✓=13, ✖=5, error=0]
+Evaluation:  37%|███▋      | 18/49 [12:36<16:49, 32.55s/it, ✓=13, ✖=5, error=0]
+Evaluation:  37%|███▋      | 18/49 [12:37<16:49, 32.55s/it, ✓=13, ✖=6, error=0]
+Evaluation:  39%|███▉      | 19/49 [12:37<11:34, 23.16s/it, ✓=13, ✖=6, error=0]
+Evaluation:  39%|███▉      | 19/49 [13:35<11:34, 23.16s/it, ✓=13, ✖=7, error=0]
+Evaluation:  41%|████      | 20/49 [13:35<16:14, 33.60s/it, ✓=13, ✖=7, error=0]
+Evaluation:  41%|████      | 20/49 [13:47<16:14, 33.60s/it, ✓=14, ✖=7, error=0]
+Evaluation:  43%|████▎     | 21/49 [13:47<12:38, 27.09s/it, ✓=14, ✖=7, error=0]
+Evaluation:  43%|████▎     | 21/49 [14:25<12:38, 27.09s/it, ✓=14, ✖=8, error=0]
+Evaluation:  45%|████▍     | 22/49 [14:25<13:43, 30.50s/it, ✓=14, ✖=8, error=0]
+Evaluation:  45%|████▍     | 22/49 [14:43<13:43, 30.50s/it, ✓=15, ✖=8, error=0]
+Evaluation:  47%|████▋     | 23/49 [14:43<11:31, 26.58s/it, ✓=15, ✖=8, error=0]
+Evaluation:  47%|████▋     | 23/49 [15:16<11:31, 26.58s/it, ✓=16, ✖=8, error=0]
+Evaluation:  49%|████▉     | 24/49 [15:16<11:54, 28.59s/it, ✓=16, ✖=8, error=0]
+Evaluation:  49%|████▉     | 24/49 [15:26<11:54, 28.59s/it, ✓=17, ✖=8, error=0]
+Evaluation:  51%|█████     | 25/49 [15:26<09:11, 22.97s/it, ✓=17, ✖=8, error=0]
+Evaluation:  51%|█████     | 25/49 [16:20<09:11, 22.97s/it, ✓=18, ✖=8, error=0]
+Evaluation:  53%|█████▎    | 26/49 [16:20<12:21, 32.24s/it, ✓=18, ✖=8, error=0]
+Evaluation:  53%|█████▎    | 26/49 [16:21<12:21, 32.24s/it, ✓=19, ✖=8, error=0]
+Evaluation:  55%|█████▌    | 27/49 [16:21<08:22, 22.86s/it, ✓=19, ✖=8, error=0]
+Evaluation:  55%|█████▌    | 27/49 [16:39<08:22, 22.86s/it, ✓=19, ✖=8, error=1]
+Evaluation:  57%|█████▋    | 28/49 [16:39<07:32, 21.57s/it, ✓=19, ✖=8, error=1]
+Evaluation:  57%|█████▋    | 28/49 [16:39<07:32, 21.57s/it, ✓=19, ✖=8, error=2]
+Evaluation:  59%|█████▉    | 29/49 [16:39<07:11, 21.57s/it, ✓=19, ✖=8, error=3]
+Evaluation:  61%|██████    | 30/49 [16:39<06:49, 21.57s/it, ✓=19, ✖=8, error=4]
+Evaluation:  63%|██████▎   | 31/49 [16:39<06:28, 21.57s/it, ✓=19, ✖=8, error=5]
+Evaluation:  65%|██████▌   | 32/49 [16:39<06:06, 21.57s/it, ✓=19, ✖=8, error=6]
+Evaluation:  67%|██████▋   | 33/49 [16:39<05:45, 21.57s/it, ✓=19, ✖=8, error=7]
+Evaluation:  69%|██████▉   | 34/49 [16:39<05:23, 21.57s/it, ✓=19, ✖=8, error=8]
+Evaluation:  71%|███████▏  | 35/49 [16:39<05:01, 21.57s/it, ✓=19, ✖=8, error=9]
+Evaluation:  73%|███████▎  | 36/49 [16:39<04:40, 21.57s/it, ✓=19, ✖=8, error=10]
+Evaluation:  76%|███████▌  | 37/49 [16:39<04:18, 21.57s/it, ✓=19, ✖=8, error=11]
+Evaluation:  78%|███████▊  | 38/49 [16:39<03:57, 21.57s/it, ✓=19, ✖=8, error=12]
+Evaluation:  80%|███████▉  | 39/49 [16:39<03:35, 21.57s/it, ✓=19, ✖=8, error=13]
+Evaluation:  82%|████████▏ | 40/49 [16:39<03:14, 21.57s/it, ✓=19, ✖=8, error=14]
+Evaluation:  84%|████████▎ | 41/49 [16:39<02:52, 21.57s/it, ✓=19, ✖=8, error=15]
+Evaluation:  86%|████████▌ | 42/49 [16:39<00:21,  3.09s/it, ✓=19, ✖=8, error=15]--- Logging error ---
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+
+Evaluation:  86%|████████▌ | 42/49 [16:39<00:21,  3.09s/it, ✓=19, ✖=8, error=16]  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/images/swebench/sweb.eval.x86_64.django_1776_django-12915:latest/json
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/docker_build.py", line 496, in build_container
+    client.images.get(test_spec.instance_image_key)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/models/images.py", line 333, in get
+    return self.prepare_model(self.client.api.inspect_image(name))
+                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/utils/decorators.py", line 19, in wrapped
+    return f(self, resource_id, *args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/image.py", line 251, in inspect_image
+    return self._result(
+           ~~~~~~~~~~~~^
+        self._get(self._url("/images/{0}/json", image)), True
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 281, in _result
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.ImageNotFound: 404 Client Error for http+docker://localhost/v1.51/images/swebench/sweb.eval.x86_64.django_1776_django-12915:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-12915:latest")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 275, in _raise_for_status
+    response.raise_for_status()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http+docker://localhost/v1.51/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-12915
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/docker_build.py", line 499, in build_container
+    client.images.pull(test_spec.instance_image_key)
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/models/images.py", line 464, in pull
+    pull_log = self.client.api.pull(
+        repository, tag=tag, stream=True, all_tags=all_tags, **kwargs
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/image.py", line 429, in pull
+    self._raise_for_status(response)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 277, in _raise_for_status
+    raise create_api_error_from_http_exception(e) from e
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^
+  File "/opt/homebrew/lib/python3.14/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception
+    raise cls(e, response=response, explanation=explanation) from e
+docker.errors.APIError: 500 Server Error for http+docker://localhost/v1.51/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-12915: Internal Server Error ("input/output error")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 152, in run_instance
+    container = build_container(
+        test_spec, client, run_id, logger, rm_image, force_rebuild
+    )
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/docker_build.py", line 503, in build_container
+    raise Exception(
+        f"Error occurred while pulling image {test_spec.base_image_key}: {str(e)}"
+    )
+Exception: Error occurred while pulling image sweb.base.py.x86_64:latest: 500 Server Error for http+docker://localhost/v1.51/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-12915: Internal Server Error ("input/output error")
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1155, in emit
+    self.flush()
+    ~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1137, in flush
+    self.stream.flush()
+    ~~~~~~~~~~~~~~~~~^^
+OSError: [Errno 28] No space left on device
+Call stack:
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1043, in _bootstrap
+    self._bootstrap_inner()
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1081, in _bootstrap_inner
+    self._context.run(self.run)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/threading.py", line 1023, in run
+    self._target(*self._args, **self._kwargs)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 119, in _worker
+    work_item.run(ctx)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 357, in run_evaluation_with_progress
+    result = run_instance(*args)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 263, in run_instance
+    logger.error(error_msg)
+Message: 'Error in evaluating model for django__django-12915: Error occurred while pulling image sweb.base.py.x86_64:latest: 500 Server Error for http+docker://localhost/v1.51/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-12915: Internal Server Error ("input/output error")\nTraceback (most recent call last):\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 275, in _raise_for_status\n    response.raise_for_status()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 404 Client Error: Not Found for url: http+docker://localhost/v1.51/images/swebench/sweb.eval.x86_64.django_1776_django-12915:latest/json\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/docker_build.py", line 496, in build_container\n    client.images.get(test_spec.instance_image_key)\n    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/models/images.py", line 333, in get\n    return self.prepare_model(self.client.api.inspect_image(name))\n                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/utils/decorators.py", line 19, in wrapped\n    return f(self, resource_id, *args, **kwargs)\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/image.py", line 251, in inspect_image\n    return self._result(\n           ~~~~~~~~~~~~^\n        self._get(self._url("/images/{0}/json", image)), True\n        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n    )\n    ^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 281, in _result\n    self._raise_for_status(response)\n    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 277, in _raise_for_status\n    raise create_api_error_from_http_exception(e) from e\n          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception\n    raise cls(e, response=response, explanation=explanation) from e\ndocker.errors.ImageNotFound: 404 Client Error for http+docker://localhost/v1.51/images/swebench/sweb.eval.x86_64.django_1776_django-12915:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-12915:latest")\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 275, in _raise_for_status\n    response.raise_for_status()\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^\n  File "/opt/homebrew/lib/python3.14/site-packages/requests/models.py", line 1026, in raise_for_status\n    raise HTTPError(http_error_msg, response=self)\nrequests.exceptions.HTTPError: 500 Server Error: Internal Server Error for url: http+docker://localhost/v1.51/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-12915\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/docker_build.py", line 499, in build_container\n    client.images.pull(test_spec.instance_image_key)\n    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/models/images.py", line 464, in pull\n    pull_log = self.client.api.pull(\n        repository, tag=tag, stream=True, all_tags=all_tags, **kwargs\n    )\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/image.py", line 429, in pull\n    self._raise_for_status(response)\n    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/api/client.py", line 277, in _raise_for_status\n    raise create_api_error_from_http_exception(e) from e\n          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File "/opt/homebrew/lib/python3.14/site-packages/docker/errors.py", line 39, in create_api_error_from_http_exception\n    raise cls(e, response=response, explanation=explanation) from e\ndocker.errors.APIError: 500 Server Error for http+docker://localhost/v1.51/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-12915: Internal Server Error ("input/output error")\n\nDuring handling of the above exception, another exception occurred:\n\nTraceback (most recent call last):\n  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 152, in run_instance\n    container = build_container(\n        test_spec, client, run_id, logger, rm_image, force_rebuild\n    )\n  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/docker_build.py", line 503, in build_container\n    raise Exception(\n        f"Error occurred while pulling image {test_spec.base_image_key}: {str(e)}"\n    )\nException: Error occurred while pulling image sweb.base.py.x86_64:latest: 500 Server Error for http+docker://localhost/v1.51/images/create?tag=latest&fromImage=swebench%2Fsweb.eval.x86_64.django_1776_django-12915: Internal Server Error ("input/output error")\n\nCheck (logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-12915/run_instance.log) for more information.'
+Arguments: ()
+
+Evaluation:  88%|████████▊ | 43/49 [16:39<00:18,  3.09s/it, ✓=19, ✖=8, error=17]Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/utils.py", line 102, in run_threadpool
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 357, in run_evaluation_with_progress
+    result = run_instance(*args)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 142, in run_instance
+    log_dir.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 1016, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: 'logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13028'
+
+Evaluation:  90%|████████▉ | 44/49 [16:39<00:15,  3.09s/it, ✓=19, ✖=8, error=18]Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/utils.py", line 102, in run_threadpool
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 357, in run_evaluation_with_progress
+    result = run_instance(*args)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 142, in run_instance
+    log_dir.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 1016, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: 'logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13033'
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/utils.py", line 102, in run_threadpool
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 357, in run_evaluation_with_progress
+    result = run_instance(*args)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 142, in run_instance
+    log_dir.mkdir(parents=True, exist_ok=True)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/pathlib/__init__.py", line 1016, in mkdir
+    os.mkdir(self, mode)
+    ~~~~~~~~^^^^^^^^^^^^
+OSError: [Errno 28] No space left on device: 'logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13220'
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/utils.py", line 102, in run_threadpool
+    future.result()
+    ~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 443, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/_base.py", line 395, in __get_result
+    raise self._exception
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 86, in run
+    result = ctx.run(self.task)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/concurrent/futures/thread.py", line 73, in run
+    return fn(*args, **kwargs)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 357, in run_evaluation_with_progress
+    result = run_instance(*args)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/run_evaluation.py", line 144, in run_instance
+    logger = setup_logger(instance_id, log_file)
+  File "/opt/homebrew/lib/python3.14/site-packages/swebench/harness/docker_build.py", line 52, in setup_logger
+    handler = logging.FileHandler(log_file, mode=mode, encoding=UTF8)
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1219, in __init__
+    StreamHandler.__init__(self, self._open())
+                                 ~~~~~~~~~~^^
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/logging/__init__.py", line 1248, in _open
+    return open_func(self.baseFilename, self.mode,
+                     encoding=self.encoding, errors=self.errors)
+OSError: [Errno 28] No space left on device: '/Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/evaluation_results/logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13158/run_instance.log'
+Error building image django__django-12113: 404 Client Error for http+docker://localhost/v1.51/images/swebench/sweb.eval.x86_64.django_1776_django-12113:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-12113:latest")
+Check (logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-12113/run_instance.log) for more information.
+Error building image django__django-11999: 404 Client Error for http+docker://localhost/v1.51/images/swebench/sweb.eval.x86_64.django_1776_django-11999:latest/json: Not Found ("No such image: swebench/sweb.eval.x86_64.django_1776_django-11999:latest")
+Check (logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-11999/run_instance.log) for more information.
+<class 'OSError'>: [Errno 28] No space left on device: 'logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13028'
+<class 'OSError'>: [Errno 28] No space left on device: 'logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13033'
+<class 'OSError'>: [Errno 28] No space left on device: 'logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13220'
+<class 'OSError'>: [Errno 28] No space left on device: '/Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/evaluation_results/logs/run_evaluation/claude_code_20260405_032222/claude-code/django__django-13158/run_instance.log'
+All instances run.
+Cleaning cached images...
+Removed 0 images.
+Total instances: 300
+Instances submitted: 50
+Instances completed: 27
+Instances incomplete: 250
+Instances resolved: 19
+Instances unresolved: 8
+Instances with empty patches: 1
+Instances with errors: 22
+Unstopped containers: 0
+Unremoved images: 4
+Report written to claude-code.claude_code_20260405_032222.json
+
+Evaluation:  92%|█████████▏| 45/49 [16:42<01:29, 22.28s/it, ✓=19, ✖=8, error=18]
+Exception ignored while finalizing file <urllib3.response.HTTPResponse object at 0x1165700d0>:
+Traceback (most recent call last):
+  File "/opt/homebrew/lib/python3.14/site-packages/urllib3/response.py", line 1279, in close
+    self._fp.close()
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/client.py", line 432, in close
+    super().close() # set "closed" flag
+  File "/opt/homebrew/Cellar/python@3.14/3.14.0_1/Frameworks/Python.framework/Versions/3.14/lib/python3.14/http/client.py", line 445, in flush
+    self.fp.flush()
+ValueError: I/O operation on closed file.
+
+📊 Real Evaluation Score: 6.33% (19/300 issues fixed)
+
+✅ Results logged to /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/benchmark_scores.log
+   Generation Score: 98.00% (patches created)
+   Evaluation Score: 6.33% (issues fixed) ← REAL SCORE
+
+============================================================
+BENCHMARK SUMMARY
+============================================================
+Dataset: princeton-nlp/SWE-bench_Lite
+Instances tested: 50
+Generation Score: 98.00% (patches created)
+Evaluation Score: 6.33% (issues fixed) ← REAL SCORE
+
+Total time: 7910.1 seconds
+Results logged to: /Users/arvin/Documents/Claude/Projects/claude-therapist/swebench-harness/benchmark_scores.log
