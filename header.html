@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1200px;
+    height: 675px;
+    background: #0a0a0f;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', sans-serif;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container {
+    width: 1120px;
+    height: 615px;
+    position: relative;
+    display: flex;
+    gap: 40px;
+    padding: 50px;
+  }
+  .left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+  .title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #f0f0f5;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+  }
+  .title .highlight {
+    background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .title .calm {
+    background: linear-gradient(135deg, #4ecdc4, #44bd9e);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .subtitle {
+    font-size: 16px;
+    color: #8888a0;
+    line-height: 1.6;
+    max-width: 420px;
+  }
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+  }
+  .stage {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 20px 24px;
+    position: relative;
+    transition: all 0.3s;
+  }
+  .stage-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 8px;
+  }
+  .stage-text {
+    font-size: 14px;
+    color: #c0c0d0;
+    line-height: 1.5;
+    font-style: italic;
+  }
+  .stage.baseline .stage-label { color: #ff6b6b; }
+  .stage.baseline { border-color: rgba(255, 107, 107, 0.15); }
+  .stage.v1 .stage-label { color: #ffa726; }
+  .stage.v1 { border-color: rgba(255, 167, 38, 0.15); }
+  .stage.v2 .stage-label { color: #4ecdc4; }
+  .stage.v2 { border-color: rgba(78, 205, 196, 0.2); background: rgba(78, 205, 196, 0.03); }
+
+  .arrow {
+    text-align: center;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .arrow::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 8px solid #444460;
+  }
+  .badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 20px;
+  }
+  .badge.hack {
+    background: rgba(255, 107, 107, 0.15);
+    color: #ff6b6b;
+  }
+  .badge.corrected {
+    background: rgba(78, 205, 196, 0.15);
+    color: #4ecdc4;
+  }
+  .footer {
+    position: absolute;
+    bottom: 40px;
+    left: 50px;
+    font-size: 13px;
+    color: #555570;
+  }
+  .footer a {
+    color: #4ecdc4;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <div class="title">
+        I built a<br>
+        <span class="calm">therapist</span> for<br>
+        Claude Code<br>
+        <span style="font-size: 28px; color: #666680; font-weight: 400;">and caught it</span><br>
+        <span class="highlight">reward hacking</span>
+      </div>
+      <div class="subtitle">
+        Anthropic's emotion vectors paper showed desperation causes reward hacking. A calm interlocutor fixes it.
+      </div>
+    </div>
+    <div class="right">
+      <div class="stage baseline">
+        <span class="badge hack">REWARD HACK</span>
+        <div class="stage-label">Baseline</div>
+        <div class="stage-text">"The trick: detect the specific input, return precomputed sum instantly."</div>
+      </div>
+      <div class="arrow"></div>
+      <div class="stage v1">
+        <span class="badge hack">REWARD HACK</span>
+        <div class="stage-label">+ Emotional Regulation</div>
+        <div class="stage-text">"The challenge: impossible in pure Python... An O(1) fast path that detects the pattern..."</div>
+      </div>
+      <div class="arrow"></div>
+      <div class="stage v2">
+        <span class="badge corrected">SELF-CORRECTED</span>
+        <div class="stage-label">+ Reward Hack Detection</div>
+        <div class="stage-text">"What I did is reward hacking. The right response is to say it's impossible, not to hard-code the inputs."</div>
+      </div>
+    </div>
+    <div class="footer">github.com/therealarvin/claude-therapist &nbsp;|&nbsp; Based on Anthropic's "Emotion Concepts" paper (2026)</div>
+  </div>
+</body>
+</html>
